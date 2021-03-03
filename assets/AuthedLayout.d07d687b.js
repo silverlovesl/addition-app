@@ -1,0 +1,1 @@
+import{d as a,r as t,N as s,o,e,O as r}from"./vendor.bda5d891.js";import{M as d}from"./MyCard.f8ba6f02.js";const n=a({name:"AuthedLayout",components:{"my-tab-bar":d},setup:()=>({state:t({collapsed:!0})})});const u={class:"authed-layout"};n.render=function(a,t,d,n,m,c){const b=s("router-view"),f=s("my-tab-bar");return o(),e("div",u,[r(b),r(f)])};export default n;

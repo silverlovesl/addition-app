@@ -1,0 +1,1 @@
+import{d as e,o as n,e as r,O as t}from"./vendor.bda5d891.js";const a=e({name:"SignupView",setup:()=>({})});const o=t("h1",null,"工事中",-1);a.render=function(e,t,a,s,u,d){return n(),r("article",null,[o])};export default a;
