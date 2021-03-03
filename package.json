@@ -1,7 +1,7 @@
 {
   "name": "addition-app-frontend",
   "version": "0.0.0",
-  "homepage": "https://addition-plus.github.io/addition-app/",
+  "homepage": "https://silverlovesl.github.io/addition-app/",
   "scripts": {
     "serve": "vite --mode development",
     "build": "vite build",
