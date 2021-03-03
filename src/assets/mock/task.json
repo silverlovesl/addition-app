@@ -1,0 +1,7 @@
+{
+  "data": [
+    { "taskID": 1, "name": "ゴミ出し", "timeSpan": 1 },
+    { "taskID": 2, "name": "料理", "timeSpan": 2 },
+    { "taskID": 3, "name": "子供 - 入力準備", "timeSpan": 2 }
+  ]
+}

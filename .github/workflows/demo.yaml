@@ -1,0 +1,40 @@
+on:
+  push:
+    branches:
+      - feature/demo
+
+name: Build for demo
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ job.status }}
+    strategy:
+      matrix:
+        image: ['nginx']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup - Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install dependency
+        run: yarn install
+
+      - name: Build project for github IO
+        run: |-
+          yarn demo-deploy
+          touch dist/.nojekyll
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist

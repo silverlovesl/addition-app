@@ -1,0 +1,6 @@
+// vuedx 設定ファイル,vscodeで [Ant desgin vue] コンポーネントが存在しないワーニングを消すためにここで定義
+// 実際ビルドに影響出ない
+{
+  "globalComponents": [
+  ]
+}
