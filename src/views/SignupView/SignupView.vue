@@ -1,5 +1,7 @@
 <template>
-  <article></article>
+  <article>
+    <h1>工事中</h1>
+  </article>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

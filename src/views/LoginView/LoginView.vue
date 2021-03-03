@@ -8,11 +8,11 @@
           <van-field required label="メール" placeholder="ログインアカウント" error-message="" />
           <van-field required label="パスワード" placeholder="パスワード" error-message="" />
           <div class="g-my-lg"></div>
-          <van-button round block type="primary">ログイン</van-button>
+          <van-button round block type="primary" @click="onLogin">ログイン</van-button>
           <div class="g-my-md"></div>
           <van-button round block color="#00C300" plain :icon="lineIcon">Lineでログイン</van-button>
           <div class="g-my-md"></div>
-          <span class="g-fs-14 fc-gray-6">アカウントを持ってない方は、<a class="fc-primary">こちらへ</a></span>
+          <span class="g-fs-14 fc-gray-6">アカウントを持ってない方は、<a class="fc-primary" @click="onSignup">こちらへ</a></span>
         </div>
       </van-col>
     </van-row>
@@ -23,6 +23,7 @@ import { defineComponent, reactive } from 'vue';
 import { MyHeader } from '../../components';
 import bgImg from '../../assets/images/family_kaji_tetsudai.png';
 import lineIcon from '../../assets/images/line-icon.png';
+import { useRouter } from 'vue-router';
 
 const LoginView = defineComponent({
   name: 'LoginView',
@@ -30,10 +31,20 @@ const LoginView = defineComponent({
     'my-header': MyHeader,
   },
   setup() {
+    const router = useRouter();
     const state = reactive({
       headerImgSize: 160,
     });
-    return { state, bgImg, lineIcon };
+
+    const onLogin = () => {
+      router.push('/task');
+    };
+
+    const onSignup = () => {
+      router.push('/signup');
+    };
+
+    return { state, bgImg, lineIcon, onLogin, onSignup };
   },
 });
 export default LoginView;
