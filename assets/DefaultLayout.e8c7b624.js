@@ -1,0 +1,1 @@
+import{a as t,A as a,o as e,b as o,D as s}from"./vendor.8c78f9d7.js";const r=t({name:"DefaultLayout",setup:()=>({})});const n={class:"default-layout"};r.render=function(t,r,u,c,d,f){const l=a("router-view");return e(),o("div",n,[s(l)])};export default r;
