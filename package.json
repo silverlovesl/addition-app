@@ -8,7 +8,7 @@
     "build-prod": "vuedx-typecheck . && vite build --mode production",
     "preview": "vite preview",
     "vdx-check": "vuedx-typecheck .",
-    "demo-deploy": "vite build  --mode development --base=/addition-app"
+    "demo-deploy": "vite build --mode development --base=/addition-app"
   },
   "dependencies": {
     "ant-design-style-sumamry": "^1.0.7",
